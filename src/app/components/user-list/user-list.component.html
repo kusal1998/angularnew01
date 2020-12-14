@@ -1,0 +1,68 @@
+<div class="container p-2">
+    <div class="list row">
+        <div class="col-md-8">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search by User Name"
+              [(ngModel)]="firstName" 
+            />
+            <div class="input-group-append">
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                (click)="searchTitle()"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+        </div>        
+        <div class="col-md-6 p-1">
+            <div class="float-left mb-3">
+               <button type="submit" class="btn btn-primary"><a routerLink="create" class="nav-link" style="color:white">Add New User</a></button>
+            </div>
+          <h4>UserID List</h4>
+          <table class="table small">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Birth Date</th>
+                <th scope="col">Email</th>
+                <th scope="col">password</th>
+                <th scope="col">avatarUrl</th>
+                <th scope="col">joinedDate</th>
+                <th scope="col">primaryContactNumber</th>
+                <th scope="col">addressLine1</th>
+                <th scope="col">addressLine2</th>
+                <th scope="col">town</th>
+                <th scope="col">district</th>
+                <th scope="col">action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr  *ngFor="let user of users" routerLink="/users/{{ user?.userId }}">
+                <th> {{ user.userId }}</th>
+                <td>{{ user.firstName }}</td>
+                <td>{{ user.lastName }}</td>
+                <td>{{ user.birthDate }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.password }}</td>
+                <td>{{ user.avatarUrl }}</td>
+                <td>{{ user.joinedDate }}</td>
+                <td>{{ user.primaryContactNumber }}</td>
+                <td>{{ user.addressLine1 }}</td>
+                <td>{{ user.addressLine2 }}</td>
+                <td>{{ user.town }}</td>
+                <td>{{ user.district }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>      
+      </div>
+    
+</div>
+

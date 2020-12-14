@@ -1,0 +1,152 @@
+<div class="container">
+    <div style="width: 400px; margin: auto;">
+        <h1>Add New User</h1>
+        <div class="submit-form">
+          <div *ngIf="!submitted">
+            <div class="form-group">
+                <label for="title">User Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="title"
+                  required
+                  [(ngModel)]="users.username"
+                  name="title"
+                />
+              </div>
+            <div class="form-group">
+              <label for="title">First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="title"
+                required
+                [(ngModel)]="users.firstName"
+                name="title"
+              />
+            </div>
+            <div class="form-group">
+                <label for="title">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="title"
+                  required
+                  [(ngModel)]="users.lastName"
+                  name="title"
+                />
+              </div>
+              
+            <div class="form-group">
+              <label for="description">Birth Date</label>
+              <input
+                class="form-control"
+                id="description"
+                required
+                [(ngModel)]="users.birthDate"
+                name="description"
+              />
+            </div>
+            <div class="form-group">
+                <label for="title">password</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="title"
+                  required
+                  [(ngModel)]="users.password"
+                  name="title"
+                />
+              </div>
+              <div class="form-group">
+                <label for="title">avatarUrl</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="title"
+                  required
+                  [(ngModel)]="users.avatarUrl"
+                  name="title"
+                />
+              </div>
+              <div class="form-group">
+                <label for="title">joinedDate</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="title"
+                  required
+                  [(ngModel)]="users.joinedDate"
+                  name="title"
+                />
+              </div>
+              <div class="form-group">
+                <label for="title">primaryContactNumber</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="title"
+                  required
+                  [(ngModel)]="users.primaryContactNumber"
+                  name="title"
+                />
+              </div>
+              <div class="form-group">
+                <label for="title">addressLine1</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="title"
+                  required
+                  [(ngModel)]="users.addressLine1"
+                  name="title"
+                />
+              </div>
+              <div class="form-group">
+                <label for="title">addressLine2</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="title"
+                  required
+                  [(ngModel)]="users.addressLine2"
+                  name="title"
+                />
+              </div>
+              <div class="form-group">
+                <label for="title">town</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="title"
+                  required
+                  [(ngModel)]="users.town"
+                  name="title"
+                />
+              </div>
+              <div class="form-group">
+                <label for="title">district</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="title"
+                  required
+                  [(ngModel)]="users.district"
+                  name="title"
+                />
+              </div>
+            <button (click)="saveUser()" class="btn btn-success mt-4">Submit</button>
+          </div>
+      
+          <div *ngIf="submitted">
+            <h4>You submitted successfully!</h4>
+            <button class="btn btn-success mt-5" (click)="newUser()">Add</button>
+          </div>
+
+          <div class="float-left mt-2">
+            <button type="submit" class="btn btn-primary" routerLink="/" class="nav-link">Back</button>
+         </div>
+        </div>
+      </div>
+    
+</div>

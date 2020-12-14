@@ -27,7 +27,7 @@
           <table class="table small">
             <thead>
               <tr>
-                <th scope="col">#</th>
+                <th scope="col" hidden>#</th>
                 <th scope="col">First Name</th>
                 <th scope="col">Last Name</th>
                 <th scope="col">Birth Date</th>
@@ -40,12 +40,11 @@
                 <th scope="col">addressLine2</th>
                 <th scope="col">town</th>
                 <th scope="col">district</th>
-                <th scope="col">action</th>
               </tr>
             </thead>
             <tbody>
               <tr  *ngFor="let user of users" routerLink="/users/{{ user?.userId }}">
-                <th> {{ user.userId }}</th>
+                <th hidden> {{ user.userId }}</th>
                 <td>{{ user.firstName }}</td>
                 <td>{{ user.lastName }}</td>
                 <td>{{ user.birthDate }}</td>
